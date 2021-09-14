@@ -8,7 +8,8 @@ function main(){
     var vertices = [
         -0.5, 0.5,   //Titik A
         -0.5, -0.5,  //Titik B
-        0.5, -0.5  //Titik C
+         0.5, -0.5,  //Titik C
+       
     ];
 
     //create buffer : banyak titik
@@ -59,5 +60,8 @@ function main(){
 
     //command untuk menggambar
     //triangles: 3 titik
+    // line_strip : garis yg menghubungkan vertex dgn vertex selanjutnya (butuh 4 titik)
+    // line_loop : sama spt line_strip, vertex terakhir langsung terhubung ke vertex pertama (3 titik)
+    // lines : gambar garis untuk 1 pair vertex (butuh 6 titik)
     gl.drawArrays(gl.TRIANGLES, 0, 3);
 }
